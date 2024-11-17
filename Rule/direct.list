@@ -6,5 +6,6 @@ DOMAIN-SUFFIX,music.126.net
 DOMIN-SUFFIX,music.163.com
 #B站图片服务器(各类资源)
 DOMIN-SUFFIX,hdslb.com
-
+#微软时间服务器
+DOMIN-SUFFIX,time.windows.com
 
