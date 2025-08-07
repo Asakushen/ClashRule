@@ -1,0 +1,14 @@
+# 内容：Microsoft Services Proxy
+# 微软服务规则集，包含 Bing 搜索、Rewards 等服务
+payload:
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,cn.bing.com
+  - DOMAIN-SUFFIX,rewards.bing.com
+  - DOMAIN-SUFFIX,rewards.microsoft.com
+  - DOMAIN-SUFFIX,bingapis.com
+  - DOMAIN-SUFFIX,bingads.com
+  - DOMAIN-SUFFIX,bingads.microsoft.com
+  - DOMAIN-SUFFIX,bingadvertising.com
+  - DOMAIN-SUFFIX,bingmaps.com
+  - DOMAIN-SUFFIX,bingworld.com
+  - DOMAIN-SUFFIX,microsoftrewards.com
