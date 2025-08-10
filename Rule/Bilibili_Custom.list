@@ -1,0 +1,5 @@
+# Bilibili自定义规则
+# Bilibili CDN
+DOMAIN-SUFFIX,bilivideo.com
+# Bilibili UPOS
+DOMAIN-KEYWORD,upos

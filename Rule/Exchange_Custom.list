@@ -1,0 +1,11 @@
+# 加密货币交易所自定义规则
+# Binance
+DOMAIN-SUFFIX,binance.com
+# OKX
+DOMAIN-SUFFIX,okx.com
+# Huobi
+DOMAIN-SUFFIX,huobi.com
+# Coinbase
+DOMAIN-SUFFIX,coinbase.com
+# Bybit
+DOMAIN-SUFFIX,bybit.com

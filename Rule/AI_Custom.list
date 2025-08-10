@@ -1,0 +1,5 @@
+# AI服务自定义规则
+# Google AI Studio
+DOMAIN-SUFFIX,aistudio.google.com
+# Trae AI
+DOMAIN-KEYWORD,trae
