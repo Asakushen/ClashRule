@@ -126,33 +126,44 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 国外代理, 🎯 国内直连, ✈️ 手动选择, 🛩️ 手动选择备用, 🚢 手动选择2, 🚁 自建节点]}
 
 
-# 规则匹配 - 按照SimpleClashRule_Lite.ini的优先级顺序
+# 规则匹配 - 严格按照SimpleClashRule_Lite.ini的优先级顺序
 rules:
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 国外代理
-  - RULE-SET,proxylite,🚀 国外代理
+  # 1. 加密货币交易所（高频使用保留）
   - RULE-SET,exchange_binance,💰 交易所
   - RULE-SET,exchange_custom,💰 交易所
+  # 2. 微软服务（轻量规则）
   - RULE-SET,microsoft_domain,Ⓜ️ Microsoft
   - RULE-SET,microsoft_custom,Ⓜ️ Microsoft
+  # 3. Emby服务
   - RULE-SET,emby_custom,🎬 Emby
+  # 4. AI服务（仅保留主要AI服务）
   - RULE-SET,ai_openai,🤖 AI
   - RULE-SET,ai_claude,🤖 AI
   - RULE-SET,ai_gemini,🤖 AI
   - RULE-SET,ai_copilot,🤖 AI
   - RULE-SET,ai_custom,🤖 AI
+  # 5. 局域网直连
   - RULE-SET,local_area_network,🎯 国内直连
+  # 6. 国内服务直连（使用精简规则）
   - RULE-SET,china_domain,🎯 国内直连
   - RULE-SET,china_company_ip,🎯 国内直连
   - RULE-SET,china_ip,🎯 国内直连
+  # 7. 流媒体服务（主要服务）
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,netflix_domain,🎥 Netflix
   - RULE-SET,bilibili_domain,📺 Bilibili
   - RULE-SET,bilibili_custom,📺 Bilibili
+  # 8. 通讯软件
   - RULE-SET,telegram_domain,📲 Telegram
+  # 9. 常用服务
   - RULE-SET,apple_domain,🍎 Apple
+  # 10. 国外代理规则（轻量版）
+  - RULE-SET,proxylite,🚀 国外代理
   - RULE-SET,geolocation-!cn,🚀 国外代理
+  # 11. 漏网之鱼
   - MATCH,🐟 漏网之鱼
 
 # 规则集 - 基于SimpleClashRule_Lite.ini的规则配置
