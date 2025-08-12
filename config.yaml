@@ -110,8 +110,8 @@ proxy-groups:
   - {name: 💰 交易所, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇫🇷 法国自建自动, 直连]}
   - {name: 🎬 Emby, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 🇺🇸 美国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(美|US|(?i)States|America))"}
-  - {name: 🇫🇷 法国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(法|FR|(?i)France))"}
+  - {name: 🇺🇸 美国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(美|US|(?i)States|America))(?!.*(?i)WARP)"}
+  - {name: 🇫🇷 法国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(法|FR|(?i)France))(?!.*(?i)WARP)"}
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
