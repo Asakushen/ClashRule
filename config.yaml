@@ -118,6 +118,8 @@ proxy-groups:
 rules:
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
+  - RULE-SET,direct_custom,直连
+  - RULE-SET,proxy_custom,✈️ 手动选择
   - RULE-SET,proxylite,✈️ 手动选择
   - RULE-SET,github_domain,✈️ 手动选择
   - RULE-SET,emby_domain,🎬 Emby
@@ -165,6 +167,8 @@ rule-providers:
   binance_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/binance.mrs"}
   okx_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/okx.mrs"}
   emby_domain: { <<: *yaml, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Emby.yaml"}
+  direct_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/direct_custom.list"}
+  proxy_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/proxy_custom.list"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
   

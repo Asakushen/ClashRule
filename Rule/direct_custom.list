@@ -1,0 +1,5 @@
+# 自定义直连规则
+# 用户可以在此添加需要直连的域名或IP
+
+# 示例规则
+DOMAIN-SUFFIX,baidu.com
