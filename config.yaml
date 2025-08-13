@@ -137,6 +137,7 @@ rules:
   - RULE-SET,apple_ip,直连,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,acl4ssr_proxylite,✈️ 手动选择
   - RULE-SET,geolocation-!cn,✈️ 手动选择
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
@@ -169,6 +170,7 @@ rule-providers:
   emby_domain: { <<: *yaml, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Emby.yaml"}
   direct_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/direct_custom.list"}
   proxy_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/proxy_custom.list"}
+  acl4ssr_proxylite: { <<: *list, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
   
