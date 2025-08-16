@@ -3,3 +3,4 @@
 
 # 示例规则
 DOMAIN-SUFFIX,baidu.com
+DOMAIN-KEYWORD,anyview
