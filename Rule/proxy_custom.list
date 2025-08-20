@@ -1,6 +1,6 @@
 # 自定义代理规则
 # 用户可以在此添加需要代理的域名或IP
-#Talkatone
+# Talkatone
 DOMAIN-SUFFIX,tktn.at,PROXY
 DOMAIN-SUFFIX,tktn.be,PROXY
 # 语音留言地址，一般需要代理
