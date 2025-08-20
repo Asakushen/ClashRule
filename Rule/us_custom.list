@@ -1,0 +1,18 @@
+# Google Voice 相关规则
+DOMAIN-SUFFIX,telephony.goog
+DOMAIN-SUFFIX,voice.telephony.goog
+DOMAIN,lens.l.google.com
+
+# Google Voice 补充规则
+DOMAIN-SUFFIX,googlevoice.com
+DOMAIN-SUFFIX,voice.google.com
+DOMAIN-KEYWORD,googlevoice
+
+# Talkatone 相关规则
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,tktn.be
+# 语音留言地址，一般需要代理
+DOMAIN-SUFFIX,vm.talkatone.com
+# 贴图服务
+DOMAIN-SUFFIX,tenor.com
+

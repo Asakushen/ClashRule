@@ -120,6 +120,7 @@ rules:
   - RULE-SET,private_domain,直连
   - RULE-SET,direct_custom,直连
   - RULE-SET,proxy_custom,✈️ 手动选择
+  - RULE-SET,us_custom,🇺🇸 美国自建自动
   - RULE-SET,proxylite,✈️ 手动选择
   - RULE-SET,github_domain,✈️ 手动选择
   - RULE-SET,emby_domain,🎬 Emby
@@ -170,6 +171,7 @@ rule-providers:
   emby_domain: { <<: *yaml, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Emby.yaml"}
   direct_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/direct_custom.list"}
   proxy_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/proxy_custom.list"}
+  us_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/us_custom.list"}
   acl4ssr_proxylite: { <<: *list, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
