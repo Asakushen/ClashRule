@@ -103,6 +103,7 @@ proxy-groups:
   - {name: 🚁 自建节点, type: select, include-all: true, filter: "(?i)自建|self"}
   - {name: 📹 YouTube, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
   - {name: 🤖 AI, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, 直连]}
+  - {name: ☁️ OneDrive, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
   - {name: 🪟 Microsoft, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
   - {name: 📲 Telegram, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
@@ -129,6 +130,7 @@ rules:
   - RULE-SET,binance_domain,💰 交易所
   - RULE-SET,okx_domain,💰 交易所
   - RULE-SET,youtube_domain,📹 YouTube
+  - RULE-SET,onedrive_domain,☁️ OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,microsoft_custom,🪟 Microsoft
   - RULE-SET,apple_domain,直连
@@ -162,6 +164,7 @@ rule-providers:
   telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
   paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
+  onedrive_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
   microsoft_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
   microsoft_custom: { <<: *yaml, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Microsoft.yaml"}
   apple_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
