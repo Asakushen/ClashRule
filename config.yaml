@@ -123,6 +123,8 @@ rules:
   - RULE-SET,private_ip,DIRECT
   - RULE-SET,private_domain,DIRECT
   - RULE-SET,direct_custom,DIRECT
+  - RULE-SET,steam_download,✈️ 手动选择
+  - RULE-SET,epic_download,✈️ 手动选择
   - RULE-SET,proxy_custom,✈️ 手动选择
   - RULE-SET,us_custom,🇺🇸 美国自建自动
   - RULE-SET,proxylite,✈️ 手动选择
@@ -177,6 +179,8 @@ rule-providers:
   emby_domain: { <<: *yaml, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Emby.yaml"}
   direct_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/direct_custom.list"}
   proxy_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/proxy_custom.list"}
+  steam_download: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam-download.mrs"}
+  epic_download: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epic-download.mrs"}
   us_custom: { <<: *list, url: "https://raw.githubusercontent.com/asakushen/ClashRule/main/Rule/us_custom.list"}
   acl4ssr_proxylite: { <<: *list, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"}
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
