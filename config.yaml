@@ -8,11 +8,10 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 600
-    proxy: 直连
+    proxy: DIRECT
 
 # 节点信息
-proxies:
-  - {name: 直连, type: direct}
+proxies: []
 
 # 全局配置 
 port: 7890
@@ -101,29 +100,29 @@ dns:
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
-  - {name: ✈️ 手动选择, type: select, proxies: [🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 🛩 手动选择备用, type: select, proxies: [✈️ 手动选择, 🚢 手动选择2, 🚁 自建节点, 直连]
-  - {name: 🚢 手动选择2, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚁 自建节点, 直连]
+  - {name: ✈️ 手动选择, type: select, include-all: true}
+  - {name: 🛩 手动选择备用, type: select, include-all: true}
+  - {name: 🚢 手动选择2, type: select, include-all: true}
   - {name: 🚁 自建节点, type: select, include-all: true, filter: "(?i)自建|self"}
-  - {name: 📹 YouTube, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 🤖 AI, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, 直连]}
-  - {name: ☁️ OneDrive, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 🪟 Microsoft, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 📲 Telegram, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, 直连]}
-  - {name: 🎥 NETFLIX, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 💶 PayPal, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 💰 交易所, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇫🇷 法国自建自动, 直连]}
-  - {name: 🎬 Emby, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 🤖 AI, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, DIRECT]}
+  - {name: ☁️ OneDrive, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 🪟 Microsoft, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 📲 Telegram, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇺🇸 美国自建自动, DIRECT]}
+  - {name: 🎥 NETFLIX, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 💶 PayPal, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 💰 交易所, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, 🇫🇷 法国自建自动, DIRECT]}
+  - {name: 🎬 Emby, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [✈️ 手动选择, 🛩 手动选择备用, 🚢 手动选择2, 🚁 自建节点, DIRECT]}
   - {name: 🇺🇸 美国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(美|US|(?i)States|America))(?!.*(?i)WARP)"}
   - {name: 🇫🇷 法国自建自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(自建|self))(?=.*(法|FR|(?i)France))(?!.*(?i)WARP)"}
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - RULE-SET,private_ip,直连
-  - RULE-SET,private_domain,直连
-  - RULE-SET,direct_custom,直连
+  - RULE-SET,private_ip,DIRECT
+  - RULE-SET,private_domain,DIRECT
+  - RULE-SET,direct_custom,DIRECT
   - RULE-SET,proxy_custom,✈️ 手动选择
   - RULE-SET,us_custom,🇺🇸 美国自建自动
   - RULE-SET,proxylite,✈️ 手动选择
@@ -137,17 +136,17 @@ rules:
   - RULE-SET,onedrive_domain,☁️ OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,microsoft_custom,🪟 Microsoft
-  - RULE-SET,apple_domain,直连
+  - RULE-SET,apple_domain,DIRECT
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX
   - RULE-SET,paypal_domain,💶 PayPal
-  - RULE-SET,apple_ip,直连,no-resolve
+  - RULE-SET,apple_ip,DIRECT,no-resolve
   - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,acl4ssr_proxylite,✈️ 手动选择
   - RULE-SET,geolocation-!cn,✈️ 手动选择
-  - RULE-SET,cn_domain,直连
-  - RULE-SET,cn_ip,直连
+  - RULE-SET,cn_domain,DIRECT
+  - RULE-SET,cn_ip,DIRECT
   - MATCH,🐟 漏网之鱼
 
 # 规则集
